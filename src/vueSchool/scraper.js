@@ -206,7 +206,7 @@ module.exports.videoVariantsScrap = async (page, _url, info) => {
   let videoVariants = []
   try {
     let startJson = content?.split(`progressive":[`)?.[1] // Start-String
-    let endJson = startJson?.split(']},"lang":"en","sentry":')?.[0] // End-String
+    let endJson = startJson?.split(']},"file_codecs":{"av1"')?.[0] // End-String
     videoVariants = await eval(`[${endJson}]`) // splitted json in content(html) string
   } catch (error) {
     console.log('scraper.js::[191] error::', error, _url)
