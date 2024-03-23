@@ -15,7 +15,7 @@ module.exports.downloadVideo = async function ({
   quality = '',
 }) {
   try {
-    // // downloads/course-title/chapter/video-title-[quality].mp3
+    // downloads/course-title/chapter/video-title-[quality].mp3
     try {
       console.log(`Downloading.... ${chapterIdx}.${videoIdx} ${videoTitle}`)
       const downloadPath = `${rootPath}/downloads/${courseTitle}/${chapterIdx}-${chapterTitle}`

@@ -31,7 +31,7 @@ module.exports.downloadCourses = async function () {
             return info?.quality === quality
           })?.url
 
-          // // downloads/course-title/chapter/video-title-[quality].mp3
+          // downloads/course-title/chapter/video-title-[quality].mp3
 
           try {
             console.log(`Downloading......${cIdx}.${vId} ${vidObj?.title}`)

@@ -16,7 +16,7 @@ module.exports.login = async (browserInstance) => {
   await page.type('input[type=password]', password)
   // await screenshot(page, '1 LoginPage')
 
-  // // click and wait for navigation
+  // click and wait for navigation
   await Promise.all([
     page.click(`button.btn[tabindex]`),
     page.waitForNavigation({ waitUntil: 'networkidle0' }),
@@ -158,7 +158,7 @@ module.exports.courseScraper = async function courseScraper(
 
         const variants = await this.videoVariantsScrap(page, video?.src)
 
-        // // Download video on by one
+        // Download video on by one
         await downloadVideo({
           videoUrl: variants?.find((item) => item?.quality === quality)?.url,
           courseTitle: courseTitle,
